@@ -12,7 +12,7 @@ Este proyecto es una aplicación web que consume una API pública para mostrar i
 
 ## Enlace a GitHub Pages
 
-👉 [Ver el proyecto](https://TU_USUARIO.github.io/NOMBRE_DEL_REPOSITORIO/)
+👉 (https://pucetec-dw.github.io/laboratorio-2-WilsonM0105/)
 
 ## Cómo funciona
 
