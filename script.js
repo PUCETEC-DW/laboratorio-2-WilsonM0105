@@ -13,11 +13,11 @@ function mostrarPaises(lista) {
     resultado.innerHTML = "";
 
     lista.forEach(pais => {
-        const nombre = pais.translations?.spa?.official || pais.name.official;
+        const nombre = pais.translations?.spa?.common || pais.name.common || pais.name.official;
         const div = document.createElement("div");
         div.innerHTML = `
             <h2>${nombre}</h2>
-            <img src="${pais.flags.svg}" alt="Bandera de ${nombre}" width="100">
+            <img src="${pais.flags.svg}" alt="Bandera de ${nombre}">
             <p><strong>Región:</strong> ${pais.region}</p>
             <p><strong>Población:</strong> ${pais.population.toLocaleString()}</p>
             <hr>
@@ -29,7 +29,7 @@ function mostrarPaises(lista) {
 document.getElementById("buscar").addEventListener("input", function() {
     const texto = this.value.toLowerCase();
     const filtrados = paises.filter(pais => {
-        const nombre = pais.translations?.spa?.official?.toLowerCase() || pais.name.official.toLowerCase();
+        const nombre = (pais.translations?.spa?.common || pais.name.common || pais.name.official).toLowerCase();
         return nombre.includes(texto);
     });
     mostrarPaises(filtrados);
